@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class ScoreTriggerZone : MonoBehaviour
 {
-    //creat a cariable to keep track of whether the trigger zone is active
+
+    //create a variable to keep track of whether the trigger zone is active
     bool active = true;
 
+    PlatformerPlayerController playerController;
+
+    private void Start()
+    {
+        playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlatformerPlayerController>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -18,6 +25,13 @@ public class ScoreTriggerZone : MonoBehaviour
 
             //add 1 to the score when the player enters the trigger zone
             ScoreManager.score++;
+
+            //play coin sound effect
+            
+            //sett
+            //PlatformerPlayerController playerController = collision.gameObject.GetComponent<PlatformerPlayerController>().PlayCoinSound;
+
+            playerController.PlayCoinSound();
 
             //destroy this game object
             Destroy(gameObject);

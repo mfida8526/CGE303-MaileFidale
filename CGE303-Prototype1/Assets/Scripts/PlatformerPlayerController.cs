@@ -24,11 +24,21 @@ public class PlatformerPlayerController : MonoBehaviour
 
     private float horizontalInput;
 
+    public AudioClip jumpSound;
+    private AudioSource playerAudio;
+
+    public AudioClip coinSound;
+    //private AudioSource coinAudio;
+
+
     // Start is called before the first frame update
     void Start()
     {
         //get the Rigidbody2D component attached to this GameObject
         rb = GetComponent<Rigidbody2D>();
+
+        //set the reference for the AudioSource
+        playerAudio = GetComponent<AudioSource>();
 
         //ensure the groundCheck variable is assinged
         if (groundcheck == null)
@@ -48,6 +58,9 @@ public class PlatformerPlayerController : MonoBehaviour
         {
             //apply an upward force for jumping
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+
+            //play jump sound effect
+            playerAudio.PlayOneShot(jumpSound, 1.0f);
         }
     }
 
@@ -69,5 +82,11 @@ public class PlatformerPlayerController : MonoBehaviour
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);   //facing left
         }
+    }
+
+    public void PlayCoinSound()
+    {
+        //play coin sound
+        playerAudio.PlayOneShot(coinSound, 1.0f);
     }
 }
