@@ -576,7 +576,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.45660377, g: 0.85999686, b: 1, a: 0}
+  m_BackGroundColor: {r: 1, g: 0.91055465, b: 0.7396226, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -593,7 +593,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.77
+  orthographic size: 9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1323,6 +1323,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &1648788154
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648788146}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2ad93227010a2234fad6c4b96fac79ea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1657059709
 GameObject:
   m_ObjectHideFlags: 0
@@ -6978,6 +6999,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5502473523779535328, guid: bbc3d23c80c5f1f46ad45ead4043f51c, type: 3}
+      propertyPath: m_Size.x
+      value: 1.2161605
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502473523779535328, guid: bbc3d23c80c5f1f46ad45ead4043f51c, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2865989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502473523779535328, guid: bbc3d23c80c5f1f46ad45ead4043f51c, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.03238666
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502473523779535328, guid: bbc3d23c80c5f1f46ad45ead4043f51c, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.22487521
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502473523779535330, guid: bbc3d23c80c5f1f46ad45ead4043f51c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6367560908665664636, guid: 40de9a8703e2e5a47882b0b86451c741, type: 3}
     - target: {fileID: 5502473523779535331, guid: bbc3d23c80c5f1f46ad45ead4043f51c, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -7034,6 +7075,10 @@ PrefabInstance:
       propertyPath: jumpSound
       value: 
       objectReference: {fileID: 8300000, guid: 030ade0908f5338439cefe4b7a2682d0, type: 3}
+    - target: {fileID: 5502473523874025615, guid: bbc3d23c80c5f1f46ad45ead4043f51c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.816
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbc3d23c80c5f1f46ad45ead4043f51c, type: 3}
 --- !u!1001 &6349823164409334092
