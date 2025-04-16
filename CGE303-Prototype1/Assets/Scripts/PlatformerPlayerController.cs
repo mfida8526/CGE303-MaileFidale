@@ -19,7 +19,7 @@ public class PlatformerPlayerController : MonoBehaviour
     //bool to keep track of if we are on the ground
     public bool isGrounded; 
 
-    //reference to the Rigidbody@D component
+    //reference to the Rigidbody2D component
     private Rigidbody2D rb;
 
     private float horizontalInput;
@@ -76,7 +76,7 @@ public class PlatformerPlayerController : MonoBehaviour
         rb.velocity = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
 
         //set animator parameter xVelocityAbs to absolute ovalue of x velocity
-        animator.SetFloat("xvelocityAbs", Mathf.Abs(rb.velocity.x));
+        animator.SetFloat("xVelocityAbs", Mathf.Abs(rb.velocity.x));
 
         //set animator parameter yVelocity to y velocity
         animator.SetFloat("yVelocity", rb.velocity.y);
@@ -89,11 +89,13 @@ public class PlatformerPlayerController : MonoBehaviour
         //ensure the player is facing the direction of movement
         if (horizontalInput > 0)
         {
-            transform.localScale = new Vector3(1f, 1f, 1f);   //facing right
+            //transform.localScale = new Vector3(1f, 1f, 1f);   //facing right
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
         else if (horizontalInput < 0)
         {
-            transform.localScale = new Vector3(-1f, 1f, 1f);   //facing left
+            //transform.localScale = new Vector3(-1f, 1f, 1f);   //facing left
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
     }
 
