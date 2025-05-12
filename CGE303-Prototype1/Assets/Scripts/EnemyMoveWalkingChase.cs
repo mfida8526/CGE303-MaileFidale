@@ -23,6 +23,9 @@ public class EnemyMoveWalkingChase : MonoBehaviour
     //animator component of the enemy
     private Animator anim;
 
+    //SpriteRenderer of the enemy
+    private SpriteRenderer sr;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +37,8 @@ public class EnemyMoveWalkingChase : MonoBehaviour
 
         //get the player transform using the "Player" tag
         playerTransform = GameObject.FindWithTag("Player").transform;
+
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -98,11 +103,15 @@ public class EnemyMoveWalkingChase : MonoBehaviour
     {
         if(playerDirection.x < 0)
         {
-            transform.rotation = Quaternion.Euler(0, 0, 0);
+            //face right
+            //transform.rotation = Quaternion.Euler(0, 0, 0);
+            sr.flipX = false;
         }
         else
         {
-            transform.rotation = Quaternion.Euler(0, 180, 0);
+            //face left
+            //transform.rotation = Quaternion.Euler(0, 180, 0);
+            sr.flipX = true;
         }
     }
 
